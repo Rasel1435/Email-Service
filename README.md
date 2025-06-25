@@ -9,7 +9,7 @@ This script uses two key email protocols to interact with Gmail:
 * **How it's used in this project:**
   Connects our application (or email client like Gmail, Outlook, Thunderbird) to our email server so it can **fetch unread messages**.
 * **Example use:**
-  we use IMAP to read, search, or organize our inbox from your phone or computer.
+  we use IMAP to read, search, or organize our inbox from our phone or computer.
 * **Secure Port:** `993` (SSL)
 * **Gmail IMAP server:** `imap.gmail.com`
 
