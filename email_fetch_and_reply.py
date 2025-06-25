@@ -20,13 +20,16 @@ else:
 # Load Credentials
 EMAIL = env("EMAIL")
 PASSWORD = env("PASSWORD")
+
 IMAP_SERVER = env("IMAP_SERVER")
+IMAP_PORT = int(env("IMAP_PORT"))
+
 SMTP_SERVER = env("SMTP_SERVER")
 SMTP_PORT = int(env("SMTP_PORT"))
 
 
 # Connect to IMAP (Fetching Emails)
-imap = imapclient.IMAPClient(IMAP_SERVER, port=993, ssl=True)
+imap = imapclient.IMAPClient(IMAP_SERVER, IMAP_PORT, ssl=True)
 imap.login(EMAIL, PASSWORD)
 imap.select_folder("INBOX")
 
