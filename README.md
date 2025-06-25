@@ -16,6 +16,7 @@ This script uses two key email protocols to interact with Gmail:
 * **In this script:**
   `imapclient.IMAPClient(...)` is using IMAP to **fetch unread emails** from our Gmail inbox.
 
+---
 
 ### 📤 SMTP (Simple Mail Transfer Protocol)
 
