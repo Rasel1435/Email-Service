@@ -21,12 +21,12 @@ This script uses two key email protocols to interact with Gmail:
 ### 📤 SMTP (Simple Mail Transfer Protocol)
 
 * **Purpose:** Used for **Sending emails from our application to others**.
-* * **What it does:**
+* **What it does:**
   Sends an email from our device/app to our email provider’s server, which then sends it to the recipient.
 * **How it's used in this project:**
   Connects to Gmail via `smtp.gmail.com` to **send replies** to the fetched emails or we use SMTP to send a reply or a new email.
 * **Secure Port:** `587` (STARTTLS)
-* * **Gmail SMTP server:** `smtp.gmail.com`
+* **Gmail SMTP server:** `smtp.gmail.com`
 
 * **In this script:**
   `smtplib.SMTP(...)` is using SMTP to **send our reply message** to the sender.
