@@ -1,1 +1,7 @@
 .env
+email_services/.env
+email_services/client_secret.json
+email_services/db.sqlite3
+email_services/email_service/__pycache__
+email_services/email_api/__pycache__
+email_services/email_api/migrations
