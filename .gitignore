@@ -1,2 +1,1 @@
-.envemail_service/client_secret.json
-email_service/db.sqlite3
+.env
