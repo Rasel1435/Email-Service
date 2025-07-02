@@ -2,7 +2,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from rest_framework import status
-from .utils import fetch_email_threads, send_email, fetch_unread_emails
+from .utils import fetch_email_threads, send_email, fetch_all_inbox_emails
 
 
 class DashboardView(APIView):
@@ -73,7 +73,7 @@ class InboxView(APIView):
 
     def get(self, request):
         user = request.user
-        inbox_threads = fetch_unread_emails(user)
+        inbox_threads = fetch_all_inbox_emails(user)
         if 'error' in inbox_threads:
             return Response(inbox_threads, status=status.HTTP_400_BAD_REQUEST)
         return Response(inbox_threads)

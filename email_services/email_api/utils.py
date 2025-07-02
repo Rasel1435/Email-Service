@@ -61,7 +61,7 @@ def clean_email_body(body):
     return clean_body.strip()
 
 
-def fetch_unread_emails(user):
+def fetch_all_inbox_emails(user):
     """
     Fetch all unread emails from the user's Gmail inbox.
     Returns a dict grouped by threadId, each with subject and message list.
@@ -76,7 +76,7 @@ def fetch_unread_emails(user):
     }
 
     params = {
-        'q': 'is:unread in:inbox',
+        'q': 'in:inbox',
         'maxResults': 100
     }
 
@@ -233,7 +233,7 @@ def send_email(user, to, subject, body, thread_id=None):
     message['subject'] = subject or 'No Subject'
 
     raw = base64.urlsafe_b64encode(message.as_bytes()).decode()
-
+    
     email_data = {'raw': raw}
     if thread_id:
         email_data['threadId'] = thread_id
